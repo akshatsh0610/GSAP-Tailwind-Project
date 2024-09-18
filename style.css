@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url('./utitlities/stars-bg.png');
+    color: rgb(182, 182, 182);
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+@layer components{
+    section{
+        @apply h-[100vh] p-12
+    }
+    .container{
+        @apply grid grid-cols-2 m-auto items-center max-w-[1300px]
+    }
+    .title{
+        @apply leading-[1.2]
+    }
+    .title h1{
+        @apply text-[40px] font-suse mb-2 text-white 
+    }
+    .title h2{
+        @apply text-2xl opacity-50
+    }
+    p{
+        @apply text-sm font-semibold max-w-[400px]
+    }
+    .p{
+        @apply py-8 
+    }
+    button{
+        @apply bg-gradient-to-r from-blueBtn to-blueBtn2 text-white py-4 px-8 transition duration-300 ease-linear
+        font-semibold uppercase rounded-md hover:bg-gradient-to-r hover:from-hover1 hover:to-hover2
+    }
+    .glow{
+        @apply drop-shadow-imgShadow
+    }
+    .right-side{
+        @apply justify-self-end
+    }
+    .line{
+        @apply w-full bg-line h-[2px] mt-4
+    }
+    .type{
+        @apply py-4 px-0
+    }
+    .type:first-child{
+        @apply text-lg
+    }
+    .card{
+        @apply w-[28%] rounded-md p-4 cursor-pointer hover:bg-gradient-to-l hover:from-hoverColor1 
+        hover:to-hoverColor2 transition duration-75 ease-linear
+    }
+    .card span{
+        @apply uppercase font-extralight text-white
+    }
+    .card:hover .col{
+        @apply text-white
+    }
+    .img-card{
+        @apply max-w-[350px] max-h-[350px] w-full object-cover
+    }
+    .card-1{
+        @apply bg-gradient-to-r from-color1 to-color2
+    }
+    .card-2{
+        @apply bg-gradient-to-r from-color3 to-color4
+    }
+    .card-3{
+        @apply bg-gradient-to-r from-color5 to-color6
+    }
+    .col{
+        @apply text-2xl font-bold mb-2
+    }
+    .txt{
+        @apply text-2xl
+    }
+    .txt span{
+        @apply text-blueTxt
+    }
+    .sides{
+        @apply pt-20
+    }
+    .menu-items a{
+        @apply w-[30%]
+    }
+    .star-s2{
+        @apply absolute w-[65px] right-[-2%]
+    }
+    .star-s4{
+        @apply absolute w-[65px] left-[-2%] mt-10
+    }
+    .star-s5{
+        @apply absolute w-[40px] left-[40%] mt-10
+    }
+    .image{
+        @apply animate-float
+    }
+}
+@layer utilities{
+    button::after{
+        content:'\e098';
+        font: normal normal normal 14px/1 FontAwesome;
+        margin-left: 1rem;
+    }
+}
